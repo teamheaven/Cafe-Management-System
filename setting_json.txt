@@ -1,0 +1,72 @@
+{
+  "workbench.colorTheme": "Default Dark+",
+  "explorer.confirmDelete": false,
+  "php.debug.executablePath": "",
+  "oracledevtools.bookmarkFileFolder": "C:\\Users\\deves\\Oracle\\oracle.oracledevtools",
+  "oracledevtools.download.otherFolder": "C:\\Users\\deves\\downloads",
+  "oracledevtools.connectionConfiguration.configFilesFolder": "C:\\Users\\deves\\Oracle\\network\\admin",
+  "oracledevtools.connectionConfiguration.walletFileFolder": "C:\\Users\\deves\\Oracle\\network\\admin",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.env.windows": {},
+  "C_Cpp.default.compilerPath": "c:\\Users\\deves\\OneDrive\\Desktop\\Data Structre programes\\prac_1.c",
+  "bitoAI.codeCompletion.setAutoCompletionTriggerLogic": 250,
+  "redhat.telemetry.enabled": false,
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.iconTheme": "material-icon-theme",
+  "files.autoSave": "afterDelay",
+  "editor.formatOnSave": true,
+  "console-ninja.featureSet": "Community",
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
+  },
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  "cmake.showOptionsMovedNotification": false,
+  "vsicons.dontShowNewVersionMessage": true,
+  "sqldeveloper.sqlHistory.historyLimit": 500,
+  "explorer.confirmDragAndDrop": false,
+  "mssql.connectionGroups": [
+    {
+      "name": "ROOT",
+      "id": "9971244F-EE81-4017-9345-7A942C9D50AB"
+    }
+  ],
+  "workbench.editorAssociations": {
+    "*.picke": "default"
+  },
+  "editor.autoIndentOnPaste": true,
+
+  // ✅ Add this block at root level (for iText library)
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar"
+  ],
+
+  "java.completion.favoriteStaticMembers": [
+    "org.junit.Assert.*",
+    "org.junit.Assume.*",
+    "org.junit.jupiter.api.Assertions.*",
+    "org.junit.jupiter.api.Assumptions.*",
+    "org.junit.jupiter.api.DynamicContainer.*",
+    "org.junit.jupiter.api.DynamicTest.*",
+    "org.mockito.Mockito.*",
+    "org.mockito.ArgumentMatchers.*",
+    "org.mockito.Answers.*"
+  ],
+  "java.import.exclusions": [
+    
+    "**/node_modules/**",
+    "**/.metadata/**",
+    "**/archetype-resources/**",
+    "**/META-INF/maven/**"
+  ]
+}

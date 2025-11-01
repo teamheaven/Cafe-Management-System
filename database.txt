@@ -1,0 +1,83 @@
+-- ===========================
+-- CAFE DELIGHT DATABASE SETUP
+-- ===========================
+
+-- Create new database
+CREATE DATABASE cafe_db;
+
+-- Use the new database
+USE cafe_db;
+
+-- ===========================
+-- USERS TABLE
+-- ===========================
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    role VARCHAR(20) NOT NULL
+);
+
+-- Insert sample users
+INSERT INTO users (username, password, role) VALUES
+('admin', 'admin123', 'admin'),
+('user', 'asdw', 'customer');
+
+-- ===========================
+-- MENU ITEMS TABLE
+-- ===========================
+CREATE TABLE menu_items (
+    item_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    stock_qty INT NOT NULL
+);
+
+-- Insert menu items
+INSERT INTO menu_items (name, price, stock_qty) VALUES
+('Espresso', 100.00, 43),
+('Cappuccino', 150.00, 40),
+('Cold Coffee', 120.00, 30),
+('Sandwich', 80.00, 50),
+('Burger', 120.00, 20),
+('Latte', 130.00, 45),
+('Americano', 140.00, 35),
+('Mocha', 160.00, 25),
+('Caramel Macchiato', 170.00, 20),
+('Cheese Toast', 90.00, 35),
+('Veg Wrap', 100.00, 25),
+('Fries', 70.00, 60),
+('Brownie', 110.00, 25),
+('Chocolate Muffin', 90.00, 30),
+('Donut', 85.00, 40),
+('Croissant', 95.00, 20),
+('Waffle', 130.00, 15),
+('Hot Chocolate', 140.00, 25),
+('Iced Tea', 90.00, 30),
+('Smoothie', 150.00, 20),
+('Lemonade', 80.00, 35);
+
+-- ===========================
+-- ORDERS TABLE
+-- ===========================
+CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    total_amount DECIMAL(10,2) NOT NULL,
+    customer_name VARCHAR(100) NOT NULL,
+    table_no INT NULL DEFAULT NULL,
+    payment_method VARCHAR(20) DEFAULT NULL,
+    payment_done TINYINT(1) DEFAULT 0
+);
+
+ALTER TABLE orders ADD COLUMN ordered_items VARCHAR(255);
+
+CREATE TABLE IF NOT EXISTS order_items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,
+    item_name VARCHAR(100),
+    price DOUBLE,
+    quantity INT,
+    total DOUBLE,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id)
+);
