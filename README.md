@@ -1,20 +1,23 @@
 # Cafe Management System (CMS)
 
 A Java-based desktop application for managing cafe orders, payments, and billing.  
-This project includes features for user login, order management, UPI/Cash payment, QR code generation, and PDF receipt generation.
+This project includes features for user login, order management, UPI/Cash payment, Stock Management, Order History Page, and PDF receipt generation.
 
 ---
 
 ## Features
 
-- **User Login:** Simple authentication with username and password.  
-- **Order Management:** Select items, update quantity, and add customer name.  
+- **User Login & Register:** Simple authentication with username and password.  
+- **Order Management:** Select items, quantity, table no, Current order,  Proceed to payment, and add the Customer name.
+- **Stock Management:** Select items, update quantity, and manage & update the stock.
 - **Payment Options:**
-  - **UPI Payment:** Scan QR and confirm payment.
-  - **Cash Payment:** Direct payment option.
+- **UPI Payment:** Scan QR and confirm payment.
+- **Cash Payment:** Direct payment option.
 - **PDF Bill Generation:** Automatically generates a receipt after payment.  
 - **Dashboard:** View orders and reports (future enhancements: daily sales summary).  
 - **QR Code Support:** Static scannable QR for UPI payments.
+- **Order History:** Used to manage the history, check, or track the history.
+- **Menu Page:** Where the user can see the menu of items. 
 
 ---
 
@@ -43,10 +46,18 @@ This project includes features for user login, order management, UPI/Cash paymen
 ---
 
 ### Compile the application using
-javac -cp ".;lib/*" src/*.java
+javac -cp ".;../lib/*" *.java  
 
 ## Run this application
-java -cp ".;lib/*;src" LoginForm
+java -cp ".;../lib/*" LoginForm
+
+---
+
+## IF access denied for 'root'@'localhost' (using password: no) occurs, here is the solution -
+Go to the SQL command line and run these - 
+SELECT user, host, plugin FROM mysql.user WHERE user='root';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password'; 
+FLUSH PRIVILEGES;
 
 ---
 
