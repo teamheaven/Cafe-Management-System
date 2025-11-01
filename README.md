@@ -55,9 +55,9 @@ java -cp ".;../lib/*" LoginForm
 
 ## IF access denied for 'root'@'localhost' (using password: no) occurs, here is the solution -
 Go to the SQL command line and run these - 
-SELECT user, host, plugin FROM mysql.user WHERE user='root';
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password'; 
-FLUSH PRIVILEGES;
+- SELECT user, host, plugin FROM mysql.user WHERE user='root';
+- ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password'; 
+- FLUSH PRIVILEGES;
 
 ---
 
